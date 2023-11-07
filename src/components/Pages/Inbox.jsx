@@ -32,7 +32,7 @@ const Inbox = () => {
     <div className={styles.inbox}>
       <h2>INBOX</h2>
       {emails?.map((data) => {
-        return <Email key={data[0]} email={data[1].data} id={data[0]} />;
+       return <Email key={data[0]} sent={false} email={data[1].data} id={data[0]} />;
       })}
     </div>
   );

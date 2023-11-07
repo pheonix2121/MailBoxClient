@@ -6,7 +6,7 @@ import { FaCircle} from 'react-icons/fa'
 import { useSelector } from "react-redux";
 import { deleteMail } from "../store/MailApi";
 
-const Email = ({id, email }) => {
+const Email = ({id, email, sent }) => {
 
   const userEmail= useSelector(state=> state.auth.userEmail)
 
@@ -27,13 +27,13 @@ const Email = ({id, email }) => {
   }
     return (
       <div className={styles.container}>
-        <Link to={`/emails/${id}`} className={styles.email}>
-          <div className={styles.isRead}>{!email.isRead && <FaCircle />}</div>
-          <h4>{email.from}</h4>
+         <Link to={sent? `/sent/${id}`:`/emails/${id}`} className={styles.email}>
+        <div className={styles.isRead}>{!email.isRead && !sent && <FaCircle />}</div>
+        <h4>{sent? email.to : email.from}</h4>
           <p dangerouslySetInnerHTML={{ __html: email.message }}></p>
           <span>{formatTimeStamp(email.time)}</span>
         </Link>
-        <button onClick={deleteMailHandler}>Delete</button>
+        {!sent && <button onClick={deleteMailHandler}>Delete</button>}
       </div>
     );
   };

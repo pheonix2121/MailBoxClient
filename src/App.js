@@ -6,7 +6,7 @@ import Inbox from "./components/Pages/Inbox";
 import Sent from "./components/Pages/Sent";
 import Draft from "./components/Pages/Draft";
 import ShowMail from "./components/ShowMail";
-
+import ShowSentMails from "./components/ShowSentMails";
 const App = () => {
 
 
@@ -20,6 +20,7 @@ const App = () => {
           <Route exact path="/sent" element={<Sent />} />
           <Route exact path="/drafts" element={<Draft />} />
           <Route exact path="/emails/:id" element={<ShowMail />} />
+          <Route path="/sent/:id" element={<ShowSentMails />} />
         </Routes>
       </Router>
     </div>
