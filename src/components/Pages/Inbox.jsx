@@ -16,6 +16,9 @@ const Inbox = () => {
       console.log(res)
     };
     fun();
+    const interval=  setInterval(fun, 2000);
+  console.log("run")
+  return ()=>{clearInterval(interval)}
   }, []);
 
 
