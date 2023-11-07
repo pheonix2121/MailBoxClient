@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #776565;
+    width: fit-content;
+    height:fit-content;
+  }
+
+
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .buttonContainer {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .composeBtn  {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .composeContainer {
+    margin-bottom: 20px;
+  }
+
+  .navContainer {
+    display: flex;
+  }
+
+  .navContainer ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .navContainer ul li {
+    margin-right: 10px;
+  }
+
+  .navContainer button{
+
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+
+  }
+
+  .navContainer ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  .navContainer ul li a:hover {
+    text-decoration: underline;
+  }
