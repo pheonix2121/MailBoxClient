@@ -17,3 +17,13 @@ nav {
     background-color: #292424;
     border-radius: 4px;
   }
+
+  .inbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5px;
+  }
+  .inbox p {
+    margin: 0;
+  }

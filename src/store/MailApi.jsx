@@ -53,3 +53,26 @@ export const gettingSentEmails = async (fromEmail) => {
         return error;
     }
 }
+export const gettingInboxSingleEmail = async ({email, id}) => {
+    const formattedEmail = await formatEmail(email)
+    try {
+        const res = await axios.get(
+            `https://mailboxclient-e4406-default-rtdb.asia-southeast1.firebasedatabase.app//${formattedEmail}/inbox/${id}.json`);
+            return res.data;
+    } catch (error) {
+        return error;
+    }
+}
+
+export const isReadEmaiHandler = async ({email, id, data}) => {
+    const formattedEmail = await formatEmail(email)
+    try {
+        const res = await axios.put(
+            `https://mailboxclient-e4406-default-rtdb.asia-southeast1.firebasedatabase.app//${formattedEmail}/inbox/${id}.json`,{
+                data
+            });
+            return res.data;
+    } catch (error) {
+        return error;
+    }
+}

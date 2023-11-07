@@ -1,0 +1,17 @@
+.email-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.email-header h4 {
+    margin: 0;
+}
+.email p {
+     padding: 0 10px;
+     text-align: justify;
+}
+
+.email {
+    text-align: center;
+}

@@ -36,11 +36,15 @@ const authSlice = createSlice({
 
 
     },
+    unReadEmailsHandler(state, action){
+      state.unReadEmails= action.payload;
+    
+    }
 
   },
 });
 
-export const { login, logout} = 
+export const { login, logout, unReadEmailsHandler} =
   authSlice.actions;
 
 export default authSlice.reducer;
