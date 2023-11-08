@@ -19,7 +19,7 @@ const ShowMail = () => {
       setEmail(res.data);
     }
     fetchEmail()
-  }, []);
+  }, [id, userEmail]);
 
  useEffect(()=>{
     async function fun (){

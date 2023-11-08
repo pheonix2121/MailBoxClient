@@ -1,96 +1,94 @@
 .auth {
-    margin: 3rem auto;
-    width: 95%;
-    max-width: 25rem;
-    border-radius: 6px;
-    background-color: #2d2b2e;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    text-align: center;
-    transition: .3ms;
-  }
+  margin: 3rem auto;
+  width: 95%;
+  max-width: 25rem;
+  border-radius: 6px;
+  background-color: #2d2b2e;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  text-align: center;
+  transition: 0.3s;
+}
 
-  .auth h1 {
-    text-align: center;
-    color: white;
-  }
+.auth h1 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 
-  .control {
-    margin-bottom: 0.5rem;
-  }
+.control {
+  margin-bottom: 1rem;
+}
 
-  .control label {
-    display: block;
-    color: white;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
+.control label {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
 
-  .control input {
-    font: inherit;
-    background-color: #f1e1fc;
-    color: #38015c;
-    border-radius: 4px;
-    border: 1px solid white;
-    width: 100%;
-    text-align: left;
-    padding: 0.25rem;
-  }
+.control input {
+  font: inherit;
+  background-color: #f1e1fc;
+  color: #38015c;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem;
+}
 
-  .show{
-    width: fit-content;
-    margin: .5rem 9.5rem .5rem;
-    font-size:15px;
-    cursor: pointer;
-    background-color: #433c5f;
-    border: 1px solid rgb(189, 150, 42);
-    color: white;
-    display: flex;
-    border-radius: 15px;
-    padding: .4rem .5rem .2rem .5rem;
-    justify-content: space-around;
-  }
-  .show:hover{
-    background-color: #5d4e92;
-  }
+.show {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #433c5f;
+  border: 1px solid #bd962a;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.3rem 0.5rem;
+  transition: 0.3s;
+}
 
-  .actions {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-  }
+.show:hover {
+  background-color: #5d4e92;
+}
 
-  .actions p{
-    color: #c2dd26;
-    font-size: medium;
-  }
+.actions {
+  margin-top: 1.5rem;
+}
 
-  .actions button {
-    cursor: pointer;
-    font: inherit;
-    color: white;
-    background-color: #050505;
-    border: 1px solid #c2dd26;
-    border-radius: 100px;
-    padding: .5rem 2.5rem;
-    margin: .2rem;
-  }
+.actions p {
+  color: #c2dd26;
+  font-size: 0.9rem;
+}
 
-  .actions button:hover {
-    background-color: #554461;
-    border-color: #873abb;
-  }
+.actions button {
+  cursor: pointer;
+  font: inherit;
+  color: #fff;
+  background-color: #050505;
+  border: 1px solid #c2dd26;
+  border-radius: 100px;
+  padding: 0.6rem 2.5rem;
+  margin: 0.3rem;
+  transition: 0.3s;
+}
 
-  .actions .toggle {
-    margin-top: 1rem;
-    background-color: transparent;
-    color: #9f5ccc;
-    border: none;
-    padding: 0.15rem 1.5rem;
-  }
+.actions button:hover {
+  background-color: #554461;
+  border-color: #873abb;
+}
 
-  .actions .toggle:hover {
-    background-color: transparent;
-    color: #ae82cc;
-  }
+.actions .toggle {
+  margin-top: 1.5rem;
+  background-color: transparent;
+  color: #9f5ccc;
+  border: none;
+  padding: 0.15rem 1.5rem;
+}
+
+.actions .toggle:hover {
+  background-color: transparent;
+  color: #ae82cc;
+}

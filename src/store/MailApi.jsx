@@ -36,7 +36,7 @@ export const gettingRecivedEmails = async (fromEmail) => {
     try {
         const res = await axios.get(
             `https://mailboxclient-e4406-default-rtdb.asia-southeast1.firebasedatabase.app//${formattedEmail}/inbox.json`);
-            console.log(res)
+           
         return res.data;
     } catch (error) {
         return error;
@@ -86,3 +86,14 @@ export const deleteMail = async ({ email, id }) => {
         return error;
     }
 }
+export const gettingInboxSingleEmail = async ({email, id}) => {
+    const formattedEmail = await formatEmail(email)
+    try {
+        const res = await axios.get(
+            `https://mailboxclient-e4406-default-rtdb.asia-southeast1.firebasedatabase.app//${formattedEmail}/inbox/${id}.json`);
+            return res.data;
+    } catch (error) {
+        return error;
+    }
+}
+

@@ -19,7 +19,7 @@ const Inbox = () => {
     const interval=  setInterval(fun, 2000);
   console.log("run")
   return ()=>{clearInterval(interval)}
-  }, []);
+  },[]);
 
 
   useEffect(()=>{

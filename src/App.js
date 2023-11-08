@@ -7,20 +7,40 @@ import Sent from "./components/Pages/Sent";
 import Draft from "./components/Pages/Draft";
 import ShowMail from "./components/ShowMail";
 import ShowSentMails from "./components/ShowSentMails";
+import { useSelector } from "react-redux";
+import "./App.css";
+
 const App = () => {
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
 
 
   return (
-    <div >
+    <div>
       <Router>
-      <Routes>
-          <Route exact path="/" element={<LoginPage />} />
-          <Route exact path="/home" element={<Home />} />
-          <Route exact path="/inbox" element={<Inbox />} />
-          <Route exact path="/sent" element={<Sent />} />
-          <Route exact path="/drafts" element={<Draft />} />
-          <Route exact path="/emails/:id" element={<ShowMail />} />
-          <Route path="/sent/:id" element={<ShowSentMails />} />
+        <Routes>
+          {!isLoggedIn && <Route path="/" element={<LoginPage />} />}
+          {isLoggedIn && (
+            <Route
+              path="/*"
+              element={
+                <div className="container">
+                  <div className="container-left">
+                    <Home />
+                  </div>
+                  <div className="container-right">
+                    <Routes>
+                    <Route path="/" element={<Inbox />} />
+                      <Route path="/sent" element={<Sent />} />
+
+                      <Route path="/drafts" element={<Draft />} />
+                      <Route path="/emails/:id" element={<ShowMail />} />
+                      <Route path="/sent/:id" element={<ShowSentMails />}/>
+                    </Routes>
+                  </div>
+                </div>
+              }
+            />
+          )}
         </Routes>
       </Router>
     </div>

@@ -33,7 +33,7 @@ const Email = ({id, email, sent }) => {
           <p dangerouslySetInnerHTML={{ __html: email.message }}></p>
           <span>{formatTimeStamp(email.time)}</span>
         </Link>
-        {!sent && <button onClick={deleteMailHandler}>Delete</button>}
+        <div className={styles.delete}>{!sent && <button onClick={deleteMailHandler}>Delete</button>}</div>
       </div>
     );
   };

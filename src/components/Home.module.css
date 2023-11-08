@@ -3,23 +3,20 @@
     flex-direction: column;
     align-items: center;
     background-color: #776565;
-    width: fit-content;
-    height:fit-content;
+    width: 200px;
+    height: 100vh;
   }
-
-
-
-  h1 {
+  
+  .container h1 {
     font-size: 24px;
     margin-bottom: 20px;
   }
-
+  
   .buttonContainer {
-    display: flex;
     margin-bottom: 20px;
   }
-
-  .composeBtn  {
+  
+  .composeBtn {
     padding: 8px 16px;
     background-color: #4caf50;
     color: #fff;
@@ -28,42 +25,56 @@
     cursor: pointer;
     margin-right: 10px;
   }
-
-  .composeContainer {
-    margin-bottom: 20px;
+  .composeBtn:hover{
+    background-color: #2dbe31;
   }
-
-  .navContainer {
-    display: flex;
-  }
-
-  .navContainer ul {
-    display: flex;
+  
+  .options {
     list-style-type: none;
     padding: 0;
+    margin: 0;
   }
-
-  .navContainer ul li {
-    margin-right: 10px;
+  
+  .options li {
+    margin-bottom: 10px;
   }
-
-  .navContainer button{
-
+  
+  .options li a {
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #dbd4d4;
+    flex: content;
+    background-color: #504a4a;
+    border-radius: 20%;
+  }
+  
+  .options li a:hover {
+    background-color: #222020;
+  
+  
+  }
+  
+  .options li span {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  
+  .options button {
     padding: 8px 16px;
     background-color: #4caf50;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-right: 10px;
-
+    margin-right: 15px;
+    margin-top: 50px;
   }
-
-  .navContainer ul li a {
-    text-decoration: none;
-    color: #333;
-  }
-
-  .navContainer ul li a:hover {
-    text-decoration: underline;
+  .options button:hover{
+    background-color: #2fce35;
   }
