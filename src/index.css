@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a::after, a::before, a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}

@@ -7,6 +7,7 @@ import styles from "./Home.module.css";
 
 const Home = () => {
   const totalUnreadEmails = useSelector((state) => state.auth.unReadEmails);
+  const userEmail = useSelector((state) => state.auth.userEmail);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -64,6 +65,7 @@ const [showCompose, setShowCompose] = useState(false);
         <li>
           <NavLink className={({isActive})=>isActive? styles.active: styles.option}  to="/draft">Draft</NavLink>
         </li>
+        <p>Logged In As {userEmail}</p>
         <button onClick={logoutHandler}>Logout</button>
       </ul>
     </div>
